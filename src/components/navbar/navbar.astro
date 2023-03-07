@@ -1,25 +1,27 @@
 ---
 import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
+import Logo from "@components/logo.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Features",
+    title: "Services",
     path: "#",
     children: [
-      { title: "Action", path: "#" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
+      { title: "Applications Web", path: "#" },
+      { title: "Applications Mobile", path: "#" },
+      { title: "Site Web", path: "#" },
+      { title: "E-Commerce", path: "#" },
     ],
   },
   {
-    title: "Pricing",
+    title: "Nos Offres",
     path: "/pricing",
   },
   {
-    title: "About",
+    title: "Présentation",
     path: "/about",
   },
   {
@@ -38,9 +40,7 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
+          > <Logo />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
