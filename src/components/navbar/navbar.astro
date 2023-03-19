@@ -1,32 +1,26 @@
 ---
 import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
 import Logo from "@components/logo.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Services",
+    title: "Nos Offres",
     path: "#",
     children: [
-      { title: "Applications Web", path: "#" },
-      { title: "Applications Mobile", path: "#" },
-      { title: "Site Web", path: "#" },
-      { title: "E-Commerce", path: "#" },
+      { title: "Applications Mobile", path: "/services/mobile-application" },
+      { title: "Site Web", path: "/services/website" },
+      { title: "E-Commerce", path: "/services/e-commerce" },
     ],
   },
   {
-    title: "Nos Offres",
-    path: "/pricing",
+    title: "Services",
+    path: "/services",
   },
   {
     title: "Présentation",
     path: "/about",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
   },
   {
     title: "Contact",
@@ -39,9 +33,7 @@ const menuitems = [
   <header class="flex flex-col lg:flex-row justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <a href="/" class="text-lg"
-          > <Logo />
-        </a>
+        <a href="/" class="text-lg"> <Logo /></a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
         </div>
@@ -72,17 +64,7 @@ const menuitems = [
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
-        </div>
       </MenuItems>
     </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
-      </div>
-    </div>
   </header>
 </Container>

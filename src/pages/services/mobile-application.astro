@@ -1,0 +1,51 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Pricing from "@components/pricing.astro";
+import Hero from "@assets/hero-alt.png";
+
+const pricing = [
+  {
+    name: "Applications mobile",
+    price: "Sur devis",
+    popular: true,
+    features: [
+      "Nous ne créons pas seulement des applications, nous travaillons côte à côte avec vous pour créer des solutions efficaces et sur-mesure a la hauteur de vos attentes.",
+    ],
+    button: {
+      text: "Commander",
+      link: "/contact",
+    },
+  }
+];
+---
+
+<Layout title="Création d'applications mobiles">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Création d'applications mobiles</Fragment>
+      <Fragment slot="desc">
+        <span class="px-6">
+          IZORAN STUDIO est une agence digitale spécialisée dans la création
+          d'applications mobiles innovantes et personnalisées pour iOS et
+          Android. Nous travaillons en étroite collaboration avec nos clients
+          pour comprendre leur vision et créer une application mobile qui répond
+          à leurs besoins commerciaux. Nous utilisons les dernières technologies
+          pour créer des applications mobiles performantes et intuitives qui
+          fournissent une expérience utilisateur agréable et mémorable. Nous
+          pouvons également intégrer des fonctionnalités de géolocalisation, de
+          paiement et de messagerie instantanée pour améliorer l'expérience
+          utilisateur. Que vous cherchiez à créer une application mobile pour
+          votre entreprise ou votre marque, nous sommes là pour vous aider à
+          atteindre vos objectifs.
+        </span>
+      </Fragment>
+      <img src={Hero} />
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+  </Container>
+</Layout>

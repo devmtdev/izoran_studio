@@ -4,52 +4,54 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "Commande urgente ?",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Une demande en urgence ? Un projet de dernière minute ? Vous avez besoin de votre commande rapidement ? Nous avons toujours des solutions.",
+    icon: "account",
+    pack: "mdi"
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Pensé Pour Les Mobiles",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "À l'heure où les internautes utilisent davantage leurs smartphones que leurs ordinateurs, un soin tout particulier est porté à la version nomade de votre application web. Plus que du Responsive Web Design, nous pensons tout d'abord au mobile!",
+    icon: "tablet",
+    pack: "mdi"
   },
   {
-    title: "On-Demand Components",
+    title: "Obtenir un devis gratuit",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Faites-nous part de votre demande précise par mail, en stipulant le type de besoin, la quantité, les dimensions, la finition, etc. Recevez votre devis sous 48H maxi.",
+    icon: "paper",
+    pack: "mdi"
   },
   {
-    title: "Broad Integration",
+    title: "Vous n’avez pas la capacité de mettre à jour votre site Web?",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Nous proposons une maintenance technique hebdomadaire de votre site Internet.",
+    icon: "cog",
+    pack: "mdi"
   },
   {
-    title: "SEO Enabled",
+    title: "Vous souhaitez suivre les statistiques de votre site Web?",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Nous vous proposons la création, configuration et suivi Google Analytics et Search Console.",
+    icon: "bar-chart",
+    pack: "mdi"
   },
   {
-    title: "Community",
+    title: "Appelez-nous",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Vous avez des questions sur l’un de nos produits ? Vous souhaitez avoir l’avis d’un spécialiste ? Vous souhaitez un rendez-vous?",
+    icon: "phone",
+    pack: "mdi"
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    Tout ce dont vous avez besoin pour commencer
   </h2>
-  <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
-  </p>
 </div>
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
@@ -57,7 +59,7 @@ const features = [
     features.map((item) => (
       <div class="flex gap-4 items-start">
         <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+          <Icon class="text-white" name={item.icon} pack={item.pack} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}

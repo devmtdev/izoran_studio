@@ -1,0 +1,92 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Pricing from "@components/pricing.astro";
+
+const pricing = [
+  {
+    name: "VITRINE",
+    price: "150.000 DZD",
+    popular: false,
+    features: [
+      "Gestion de projet",
+      "Nom de domaine inclus",
+      "Hébergement inclus",
+      "5 adresses e-mail pro",
+      "5 pages de contenu",
+      "Animations incluses",
+      "Formulaire de contact inclus",
+      "Design personnalisé",
+      "Version Responsive Design",
+      "Google Analytics",
+      "Référencement sur les moteurs de recherche (SEO)",
+    ],
+    button: {
+      text: "Commander",
+      link: "/contact",
+    },
+  },
+  {
+    name: "PROFESSIONNEL",
+    price: {
+      monthly: "210.000 DZD",
+      // annual: "$16",
+      // discount: "10%",
+      // original: "$24",
+    },
+    popular: true,
+    features: [
+      "Tout le Pack VITRINE",
+      "10 adresses e-mail pro",
+      "Pages de contenu Illimité",
+      "Site web Plus rapide",
+      "Sécurité avancée",
+      "Back Office inclus",
+    ],
+    button: {
+      text: "Commander",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Besoin de plus ?",
+    price: "Sur Devis",
+    popular: false,
+    features: [
+      "Notre équipe est à votre écoute.",
+    ],
+    button: {
+      text: "Contactez-nous",
+      link: "/contact",
+    },
+  },
+];
+---
+
+<Layout title="Création de sites web">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Création de sites web</Fragment>
+      <Fragment slot="desc">
+        <span class="px-6">
+          Chez IZORAN STUDIO, nous sommes spécialisés dans la création de sites
+          web personnalisés et innovants qui répondent aux besoins de nos
+          clients. Nous travaillons en étroite collaboration avec nos clients
+          pour comprendre leur vision et créer un site web qui reflète leur
+          marque et leur message. Nous utilisons les dernières technologies pour
+          créer des sites web accessibles, rapides et optimisés pour les moteurs
+          de recherche. Nous prenons également en compte les dernières tendances
+          en matière de design pour nous assurer que le site web est attrayant
+          et convivial pour les utilisateurs. Que vous cherchiez un site web
+          simple ou complexe, notre équipe de développeurs expérimentés est là
+          pour vous aider.
+        </span>
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <Pricing plan={item} />)}
+    </div>
+  </Container>
+</Layout>
