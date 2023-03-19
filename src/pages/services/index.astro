@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { Picture } from "@astrojs/image/components";
+// import { Picture } from "@astrojs/image/components";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
@@ -28,7 +28,7 @@ const services = await getCollection("services", ({ data }) => {
         services.map((service) => (
           <a class="group" href={service.slug}>
             <div class="w-full aspect-square">
-              <Picture
+              <img
                 src={service.data.avatar.src}
                 alt={service.data.avatar.alt}
                 sizes="(max-width: 800px) 100vw, 400px"
