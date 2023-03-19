@@ -6,16 +6,21 @@ import Pricing from "@components/pricing.astro";
 
 const pricing = [
   {
-    name: "Personal",
-    price: "batel",
+    name: "EXPERT",
+    price: "160.000 DZD",
     popular: false,
     features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
+      "Nom de domaine gratuit",
+      "Hébergement gratuit la première année",
+      "Performances maximales",
+      "Prise en charge de plusieurs langues",
+      "Plus de 1000 Produits actifs",
+      "Panier",
+      "Gestión de clientes",
+      "Gestión de commandes",
+      "Multiples utilisateurs pour gérer le magasin",
+      "Intégration de Facebook Pixel",
+      "Élevé dans les moteurs de recherche majeurs : Google, Yahoo…"
     ],
     button: {
       text: "Commander",
@@ -23,21 +28,20 @@ const pricing = [
     },
   },
   {
-    name: "Startup",
+    name: "PROFESSIONNEL",
     price: {
-      monthly: "120.000 DZD",
+      monthly: "300.000 DZD",
       // annual: "$16",
       // discount: "10%",
       // original: "$24",
     },
     popular: true,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
+      "Tout le pack",
+      "Plus de 3000 Produits actifs",
+      "Conception personnalisée professionnelle",
+      "Site ultra rapide",
+      "Technologie ultra sécurisée pour le site",
     ],
     button: {
       text: "Commander",
@@ -45,16 +49,11 @@ const pricing = [
     },
   },
   {
-    name: "Enterprise",
-    price: "210.000 DZD",
+    name: "Besoin de plus ?",
+    price: "Sur Devis",
     popular: false,
     features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
+      "Notre équipe est à votre écoute",
     ],
     button: {
       text: "Contactez-nous",
@@ -64,13 +63,26 @@ const pricing = [
 ];
 ---
 
-<Layout title="Pricing">
+<Layout title="Création de sites e-commerce">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">E-Commerce </Fragment>
-      <Fragment slot="desc"
-        >Tarification simple et prévisible. Pas de surprises.</Fragment
-      >
+      <Fragment slot="title">Création de sites e-commerce</Fragment>
+      <Fragment slot="desc">
+        <span class="px-6">
+          IZORAN STUDIO est une agence digitale spécialisée dans la création de
+          sites e-commerce sur mesure pour les entreprises de toutes tailles.
+          Nous travaillons en étroite collaboration avec nos clients pour
+          comprendre leur marché cible et créer une plateforme de vente en ligne
+          qui répond à leurs besoins commerciaux. Nous utilisons les dernières
+          technologies pour créer des sites e-commerce rapides, accessibles et
+          sécurisés qui offrent une expérience utilisateur fluide. Nous pouvons
+          également intégrer des fonctionnalités de paiement en ligne, de
+          gestion des stocks et de marketing pour aider nos clients à optimiser
+          leur site e-commerce et à générer des ventes. Que vous cherchiez à
+          lancer un nouveau site e-commerce ou à améliorer un site existant,
+          notre équipe de développeurs expérimentés est là pour vous aider.
+        </span>
+      </Fragment>
     </Sectionhead>
 
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
